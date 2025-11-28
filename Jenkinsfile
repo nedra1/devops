@@ -1,14 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
+        stage('Hello') {
             steps {
-                git url: 'https://github.com/nedra1/devops.git', branch: 'main'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh 'mvn clean install'
+                echo 'Hello, Jenkins!'
             }
         }
     }
